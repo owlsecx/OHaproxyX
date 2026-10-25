@@ -18,7 +18,7 @@
 
 ## 📌 Overview
 
-HAProxy load-balancer configuration hardening auditor (offline, read-only)
+OHaproxyX — HAProxy Load-Balancer Configuration Auditor. It provides stdlib parser — all sections, named defaults, conf.d; Stats page / runtime socket / TLS / backend verify. Built-in demo/self-test paths and severity gates help validate detections without touching production when those flags are used.
 
 ---
 
@@ -30,8 +30,6 @@ HAProxy load-balancer configuration hardening auditor (offline, read-only)
 - PEM / crt-list / map / acl file permission checks
 - Data Plane API exposure & credentials, peers TLS
 - Secrets masked everywhere; --root offline trees
-- Export TXT / Markdown / JSON / CSV / SARIF 2.1.0
-- Self-test --demo, CI gates --fail-on / --min-severity
 
 ---
 
@@ -45,7 +43,10 @@ HAProxy load-balancer configuration hardening auditor (offline, read-only)
 ## 🚀 Usage
 
 ```bash
-./OHaproxyX
+./OHaproxyX                                     # interactive menu
+./OHaproxyX --scan -r /path/to/root
+./OHaproxyX --demo
+./OHaproxyX --help
 ```
 
 ---
